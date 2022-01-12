@@ -1,11 +1,17 @@
 package model;
 
-public abstract class  Console {
+import java.time.LocalDate;
 
-	private String nom;
+public abstract class Console {
 
-	public Console(String nom) {
+	protected String nom;
+	protected int prix;
+	protected LocalDate date;
+
+	public Console(String nom, int prix, LocalDate date) {
 		this.nom = nom;
+		this.prix = prix;
+		this.date = date;
 	}
 
 	public String getNom() {
@@ -20,6 +26,5 @@ public abstract class  Console {
 	public String toString() {
 		return "Console [nom=" + nom + "]";
 	}
-	
-	
+
 }
