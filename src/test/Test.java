@@ -8,22 +8,25 @@ import model.Adresse;
 import model.Boutique;
 import model.Client;
 import model.Console;
+import model.Hybride;
 import model.Jeu;
+import model.Portable;
+import model.Salon;
 
 public class Test {
 
 	public static void main(String[] args) {
 		List<Jeu> jeux = new ArrayList();
 
-		Console sw = new Console("Switch");
-		Console wii = new Console("Wii");
-		Console gb = new Console("GameBoy");
+		Console sw = new Hybride("Switch",0,null);
+		Console wii = new Salon("Wii",0,null);
+		Console gb = new Portable("GameBoy",0,null);
 
-		Jeu J1 = new Jeu("Pokemon Unite", sw);
-		Jeu J2 = new Jeu("Zelda : BOTW", sw);
-		Jeu J3 = new Jeu("Super MArio Galaxy", wii);
-		Jeu J4 = new Jeu("Zelda : Twilight Princess", wii);
-		Jeu J5 = new Jeu("Pokemon Rouge", gb);
+		Jeu J1 = new Jeu("Pokemon Unite", sw, null);
+		Jeu J2 = new Jeu("Zelda : BOTW", sw, null);
+		Jeu J3 = new Jeu("Super MArio Galaxy", wii, null);
+		Jeu J4 = new Jeu("Zelda : Twilight Princess", wii, null);
+		Jeu J5 = new Jeu("Pokemon Rouge", gb, null);
 
 		Collections.addAll(jeux, J1, J2, J3, J4, J5);
 
